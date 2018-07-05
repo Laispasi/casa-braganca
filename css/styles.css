@@ -1,0 +1,153 @@
+body,
+button {
+   font-family: "museo", "Segoe UI", sans-serif !important;
+   font-size: 14px;
+   font-weight: 300;
+}
+
+h5 {
+   font-size: 20px;
+}
+
+.home {
+   height: 100vh;
+   background-image: url("/images/IMG_20180203_163848.jpg");
+   background-size: cover;
+   background-position-y: bottom;
+   color: white;
+   position: relative;
+   display: flex;
+   align-items: center;
+   width: 100%;
+}
+
+.home .container {
+   position: relative;
+}
+
+.azulzinho {
+   position: relative;
+}
+
+.item .azulzinho {
+   display: inline-block;
+}
+
+.azulzinho::before {
+   content: "";
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background-color: rgba(2, 21, 96, 0.29);
+   z-index: 0;
+   pointer-events: none;
+}
+
+.nav-mae {
+   position: fixed;
+}
+
+.nav-mae nav {
+   background-color: rgba(240, 248, 0, 0);
+   box-shadow: none;
+   text-transform: uppercase;
+}
+
+.cool-button {
+   background-color: rgba(0, 0, 0, 0.1);
+   padding: 10px 15px;
+   font-size: 16px;
+   border: solid 3px #fff;
+   color: #fff;
+   text-transform: uppercase;
+   cursor: pointer;
+}
+
+.cool-button:hover {
+   background-color: #fff;
+   color: #212121;
+}
+
+.simple-flex {
+   display: flex;
+   font-weight: 100 !important;
+}
+
+.features-column {
+   padding: 0 40px;
+}
+
+.features-column .row {
+   width: 100%;
+   margin: 0;
+}
+
+.divisor-fofo {
+   height: 2px;
+   width: 100px;
+   display: inline-block;
+   background-color: #e2e2e2;
+}
+
+.foto-navegacao {
+   display: flex;
+}
+
+.foto-navegacao .foto {
+   position: relative;
+   flex-grow: 1;
+   overflow: hidden;
+   padding: 100px 0;
+}
+
+.foto-navegacao .foto img {
+   position: absolute;
+   z-index: -2;
+   top: 0;
+   width: 100%;
+   left: 0;
+   bottom: 0;
+   margin: auto;
+   filter: brightness(100%);
+   transition: .5s filter, .5s width, .5s left;
+}
+
+.foto-navegacao .foto span {
+   color: white;
+   font-size: 20px;
+}
+
+.foto-navegacao .foto-only {
+   height: 200px;
+   overflow: hidden;
+}
+
+.foto-navegacao .foto-only .material-placeholder {
+   height: 100%;
+   width: 100%;
+}
+
+.foto-navegacao .foto-only img {
+   width: 100%;
+   filter: brightness(100%);
+   transition: .5s filter, .5s width, .5s left;
+}
+
+.foto-navegacao [class^="foto"]:hover img {
+   filter: brightness(80%);
+   width: 110%;
+   left: -5%;
+}
+
+.no-mrg-bot {
+   margin-bottom: 0 !important;
+}
+
+.cool-carousel {
+   background: #EEE;
+}
+
+.carousel-cell img {
+   display: block;
+   height: 200px;
+}
