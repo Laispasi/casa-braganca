@@ -1,8 +1,25 @@
+body {
+   overflow-x: hidden;
+}
+
+body>.row {
+   margin: 0;
+}
+
 body,
 button {
    font-family: "museo", "Segoe UI", sans-serif !important;
    font-size: 14px;
    font-weight: 300;
+}
+
+*:focus {
+   outline: none !important;
+}
+
+a {
+   color: inherit;
+   text-decoration: none;
 }
 
 h5 {
@@ -29,14 +46,15 @@ h5 {
    position: relative;
 }
 
-.item .azulzinho {
-   display: inline-block;
-}
-
 .azulzinho::before {
    content: "";
    height: 100%;
    width: 100%;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
    position: absolute;
    background-color: rgba(2, 21, 96, 0.29);
    z-index: 0;
@@ -48,9 +66,20 @@ h5 {
 }
 
 .nav-mae nav {
-   background-color: rgba(240, 248, 0, 0);
+   background-color: rgba(4, 13, 35, 0.75);
    box-shadow: none;
    text-transform: uppercase;
+}
+
+.nav-mae ul {
+   white-space: nowrap;
+   overflow-x: auto;
+   max-width: 100%;
+}
+
+.nav-mae ul li {
+   display: inline-block;
+   float: none;
 }
 
 .cool-button {
@@ -70,6 +99,7 @@ h5 {
 
 .simple-flex {
    display: flex;
+   flex-wrap: wrap;
    font-weight: 100 !important;
 }
 
@@ -89,18 +119,20 @@ h5 {
    background-color: #e2e2e2;
 }
 
-.foto-navegacao {
-   display: flex;
-}
-
-.foto-navegacao .foto {
+.row.foto-navegacao .col {
+   color: white;
+   font-size: 20px;
    position: relative;
    flex-grow: 1;
    overflow: hidden;
    padding: 100px 0;
+   height: 220px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
-.foto-navegacao .foto img {
+.row.foto-navegacao .col img {
    position: absolute;
    z-index: -2;
    top: 0;
@@ -112,42 +144,49 @@ h5 {
    transition: .5s filter, .5s width, .5s left;
 }
 
-.foto-navegacao .foto span {
-   color: white;
-   font-size: 20px;
-}
-
-.foto-navegacao .foto-only {
-   height: 200px;
-   overflow: hidden;
-}
-
-.foto-navegacao .foto-only .material-placeholder {
-   height: 100%;
-   width: 100%;
-}
-
-.foto-navegacao .foto-only img {
-   width: 100%;
-   filter: brightness(100%);
-   transition: .5s filter, .5s width, .5s left;
-}
-
-.foto-navegacao [class^="foto"]:hover img {
+.row.foto-navegacao .col:hover img {
    filter: brightness(80%);
    width: 110%;
    left: -5%;
+}
+
+.row.foto-navegacao .col span {
+   z-index: 2;
 }
 
 .no-mrg-bot {
    margin-bottom: 0 !important;
 }
 
-.cool-carousel {
-   background: #EEE;
+.cool-carousel .item {
+   height: 225px;
+   /* overflow: hidden; */
 }
 
-.carousel-cell img {
-   display: block;
-   height: 200px;
+.cool-carousel .item .azulzinho {
+   height: 100%;
+   width: 100%;
+   padding: 0 5px;
+   box-sizing: border-box;
+}
+
+.cool-carousel .item .azulzinho::before {
+   width: calc(100% - 10px);
+}
+
+.cool-carousel img {
+   height: 100%;
+}
+
+.cool-carousel img.active {
+   cursor: zoom-in;
+}
+
+.slick-prev {
+   left: 25px;
+   z-index: 1;
+}
+
+.slick-next {
+   right: 25px;
 }
