@@ -1,3 +1,21 @@
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+   anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      var id = this.getAttribute('href');
+
+      document.querySelector(id).scrollIntoView({
+         behavior: 'smooth'
+      });
+
+      $(id).removeClass('focused').addClass('focused');
+      setTimeout(() => {
+         $(id).removeClass('focused');
+      }, 2000);
+
+   });
+});
+
 document.addEventListener('DOMContentLoaded', function () {
    var elems = document.querySelectorAll('.materialboxed');
    var instances = M.Materialbox.init(elems);
