@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 $(document).ready(function () {
    $('.showcase a').simpleLightbox();
 
-   $('#name').on('keydown',function() {
+   $('#name').on('keyup change',function() {
       console.log('lool')
       $('#subject').val('Tenho interesse! - ' + $(this).val())
    });
