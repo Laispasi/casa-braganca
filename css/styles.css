@@ -154,8 +154,16 @@ h5 {
    z-index: 2;
 }
 
+.no-mrg {
+   margin: 0 !important;
+}
+
 .no-mrg-bot {
    margin-bottom: 0 !important;
+}
+
+.no-mrg-top {
+   margin-top: 0 !important;
 }
 
 .cool-carousel .item {
@@ -205,4 +213,14 @@ h5 {
    to {
       background-color: rgba(255, 255, 0, 0);
    }
+}
+
+.emoji-contato img {
+   margin-right: 15px;
+}
+
+.emoji-contato .info {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
 }
