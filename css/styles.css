@@ -84,12 +84,13 @@ h5 {
 
 .cool-button {
    background-color: rgba(0, 0, 0, 0.1);
-   padding: 10px 15px;
+   padding: 7px 15px;
    font-size: 16px;
    border: solid 3px #fff;
    color: #fff;
    text-transform: uppercase;
    cursor: pointer;
+   display: inline-block;
 }
 
 .cool-button:hover {
